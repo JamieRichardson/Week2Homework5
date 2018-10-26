@@ -4,18 +4,18 @@
  * Please be sure not to change the method signatures!
  */
 
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.TreeMap;
+import java.util.*;
 
 
 public class MovieRatingsProcessor {
 
 	public static List<String> getAlphabeticalMovies(TreeMap<String, PriorityQueue<Integer>> movieRatings) {
-		
-		/* IMPLEMENT THIS METHOD! */
-		
-		return null; // this line is here only so this code will compile if you don't modify it
+		List<String> alphaMovies = new ArrayList<>();
+		for (Object o : movieRatings.entrySet()) {
+			Map.Entry movieToAdd = (Map.Entry) o;
+			alphaMovies.add(movieToAdd.getKey().toString());
+		}
+		return alphaMovies;
 	}
 
 	public static List<String> getAlphabeticalMoviesAboveRating(TreeMap<String, PriorityQueue<Integer>> movieRatings, int rating) {

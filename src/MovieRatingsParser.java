@@ -32,11 +32,11 @@ public class MovieRatingsParser {
 
     public static void main(String[] args) {
         List<UserMovieRating> movieRatingList = new ArrayList<>();
-        UserMovieRating userMovieRating1 = new UserMovieRating("Fuck face", 5);
-        UserMovieRating userMovieRating2 = new UserMovieRating("Dick face", 6);
-        UserMovieRating userMovieRating3 = new UserMovieRating("Fuck head", 5);
+        UserMovieRating userMovieRating1 = new UserMovieRating("BAss face", 5);
+        UserMovieRating userMovieRating2 = new UserMovieRating("Zed face", 6);
+        UserMovieRating userMovieRating3 = new UserMovieRating("ass head", 5);
         UserMovieRating userMovieRating4 = new UserMovieRating("Cock face", 4);
-        UserMovieRating userMovieRating5 = new UserMovieRating("Fuck face", 3);
+        UserMovieRating userMovieRating5 = new UserMovieRating("bass face", 3);
         movieRatingList.add(userMovieRating1);
         movieRatingList.add(userMovieRating2);
         movieRatingList.add(userMovieRating3);
@@ -44,5 +44,12 @@ public class MovieRatingsParser {
         movieRatingList.add(userMovieRating5);
         parseMovieRatings(movieRatingList);
         System.out.println("Movie List parsed");
+        TreeMap<String, PriorityQueue<Integer>> alphabeticalTree = parseMovieRatings(movieRatingList);
+        List banana = MovieRatingsProcessor.getAlphabeticalMovies(alphabeticalTree);
+        System.out.println("Alphabetical Movies: ");
+        Iterator iterator = banana.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 }
