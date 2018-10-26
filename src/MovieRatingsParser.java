@@ -22,12 +22,27 @@ public class MovieRatingsParser {
                 PriorityQueue<Integer> tempQue = new PriorityQueue<>();
                 tempQue.add(movie.getUserRating());
                 returnTree.put(movieName, tempQue);
-            }
-            if (returnTree.containsKey(movieName)) {
+            } else {
                 PriorityQueue<Integer> queueToAddTo = returnTree.get(movieName);
                 queueToAddTo.add(movie.getUserRating());
             }
         }
         return returnTree;
+    }
+
+    public static void main(String[] args) {
+        List<UserMovieRating> movieRatingList = new ArrayList<>();
+        UserMovieRating userMovieRating1 = new UserMovieRating("Fuck face", 5);
+        UserMovieRating userMovieRating2 = new UserMovieRating("Dick face", 6);
+        UserMovieRating userMovieRating3 = new UserMovieRating("Fuck head", 5);
+        UserMovieRating userMovieRating4 = new UserMovieRating("Cock face", 4);
+        UserMovieRating userMovieRating5 = new UserMovieRating("Fuck face", 3);
+        movieRatingList.add(userMovieRating1);
+        movieRatingList.add(userMovieRating2);
+        movieRatingList.add(userMovieRating3);
+        movieRatingList.add(userMovieRating4);
+        movieRatingList.add(userMovieRating5);
+        parseMovieRatings(movieRatingList);
+        System.out.println("Movie List parsed");
     }
 }
