@@ -29,34 +29,4 @@ public class MovieRatingsParser {
         }
         return returnTree;
     }
-
-//    public static void main(String[] args) {
-//        List<UserMovieRating> movieRatingList = new ArrayList<>();
-//        UserMovieRating userMovieRating1 = new UserMovieRating("BAss face", 5);
-//        UserMovieRating userMovieRating2 = new UserMovieRating("Zed face", 6);
-//        UserMovieRating userMovieRating3 = new UserMovieRating("ass head", 5);
-//        UserMovieRating userMovieRating4 = new UserMovieRating("Cock face", 4);
-//        UserMovieRating userMovieRating5 = new UserMovieRating("bass face", 3);
-//        movieRatingList.add(userMovieRating1);
-//        movieRatingList.add(userMovieRating2);
-//        movieRatingList.add(userMovieRating3);
-//        movieRatingList.add(userMovieRating4);
-//        movieRatingList.add(userMovieRating5);
-//        parseMovieRatings(movieRatingList);
-//        System.out.println("Movie List parsed");
-//        TreeMap<String, PriorityQueue<Integer>> alphabeticalTree = parseMovieRatings(movieRatingList);
-//        List banana = MovieRatingsProcessor.getAlphabeticalMovies(alphabeticalTree);
-//        System.out.println("Alphabetical Movies: ");
-//        Iterator iterator = banana.iterator();
-//        while (iterator.hasNext()) {
-//            System.out.println(iterator.next());
-//        }
-//        System.out.println("Movies Above Rating: ");
-//        List apple = MovieRatingsProcessor.getAlphabeticalMoviesAboveRating(alphabeticalTree, 4);
-//        Iterator blah = apple.iterator();
-//        while (blah.hasNext()) {
-//            System.out.println(blah.next());
-//        }
-//
-//    }
 }

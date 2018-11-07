@@ -45,6 +45,4 @@ public class UserMovieRating implements Comparable<UserMovieRating> {
 	public int compareTo(UserMovieRating other) {
 		return this.userRating - other.userRating;
 	}
-	
-	
 }
